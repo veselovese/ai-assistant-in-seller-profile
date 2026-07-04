@@ -166,9 +166,9 @@ fastify.put<ItemUpdateRequest>('/items/:id', (request, reply) => {
   }
 });
 
-const port = Number(process.env.port) ?? 8080;
+const port = Number(process.env.PORT) || 8080;
 
-fastify.listen({ port }, function (err, _address) {
+fastify.listen({ port, host: '0.0.0.0' }, function (err, _address) {
   if (err) {
     fastify.log.error(err);
     process.exit(1);
