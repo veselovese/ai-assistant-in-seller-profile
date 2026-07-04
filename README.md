@@ -1,7 +1,7 @@
 # Личный кабинет продавца с ИИ-ассистентом
 
 ## **Запускаем проект**
-1. Клонируйте проект `git clone https://github.com/veselovese/ai-assistant-in-profile.git`. Перейдите в его директорию `cd avito-ai-assistant-in-profile`. Установите все зависимости командой `npm i` в обеих директориях: сначала в frontend, затем в backend.
+1. Клонируйте проект `git clone https://github.com/veselovese/ai-assistant-in-profile.git`. Перейдите в его директорию `cd ai-assistant-in-profile`. Установите все зависимости командой `npm i` в обеих директориях: сначала в frontend, затем в backend.
 2. В проекте реализована интеграция с Ollama. Установите Ollama с официального сайта `https://ollama.com/download`, загрузите модель и запустите командой `ollama run llama3` (проект тестировался на модели llama3).
 3. Создайте файл `.env` и скопируйте в него содержимое файла `.env.example`.
 4. В переменную `VITE_OLLAMA_URL` вставьте URL-адрес, на котором работает запущенная модельOllama - `http://localhost:11434`. Переменную `VITE_API_BASE_URL` оставьте пустой - проект локально работает через vite.proxy, который описан в файле vite.config.ts. Причины такого решения описаны в Дневнике разработки.
